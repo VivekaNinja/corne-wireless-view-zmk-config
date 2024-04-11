@@ -4,16 +4,15 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/mouse.h>
 #include "mouse.dtsi"
+#include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 / {
-
     chosen { zmk,matrix_transform = &default_transform; };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -103,10 +102,10 @@
 
         layer_7-mousedemo {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &msc SCROLL_UP    &trans          &mmv MOVE_UP    &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &msc SCROLL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&mkp LCLK  &trans  &trans  &trans  &trans  &trans    &msc SCROLL_UP    &trans          &mmv MOVE_UP    &trans           &trans  &trans
+&trans     &trans  &trans  &trans  &trans  &trans    &msc SCROLL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans     &trans  &trans  &trans  &trans  &trans    &trans            &trans          &trans          &trans           &trans  &trans
+                           &trans  &trans  &trans    &trans            &trans          &trans
             >;
         };
     };
